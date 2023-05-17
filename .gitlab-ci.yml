@@ -1,0 +1,15 @@
+include:
+  - project: "wwu-it/ci-templates"
+    ref: master
+    file: ".gitlab-ci-docker.yml"
+
+build:
+  extends: .docker-build
+  variables:
+    name: rust-docker-tools
+    directory: rust-docker-tools
+
+push:
+  extends: .docker-deploy
+  variables:
+    name: rust-docker-tools
