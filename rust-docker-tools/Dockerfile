@@ -6,3 +6,4 @@ RUN rustup component add rustfmt clippy llvm-tools-preview
 RUN apk add --no-cache musl-dev
 RUN cargo install cargo-binutils
 RUN rustup target add wasm32-wasi
+RUN apk add --no-cache curl
