@@ -13,3 +13,4 @@ push:
   extends: .docker-deploy
   variables:
     name: rust-docker-tools
+    directory: rust-docker-tools
