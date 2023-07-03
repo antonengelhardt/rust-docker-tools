@@ -14,3 +14,4 @@ push:
   variables:
     name: rust-docker-tools
     directory: rust-docker-tools
+    tags: latest $CI_PIPELINE_ID $CI_COMMIT_SHA
