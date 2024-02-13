@@ -1,4 +1,4 @@
-FROM rust:1.69-alpine
+FROM rust:1.75-alpine
 
 ENV CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
 
