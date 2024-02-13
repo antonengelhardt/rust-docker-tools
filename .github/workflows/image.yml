@@ -23,6 +23,6 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        file: rust-docker-tools/Dockerfile
+        file: Dockerfile
         push: true
         tags: antonengelhardt/rust-docker-tools:latest
