@@ -9,4 +9,3 @@ RUN cargo install cargo-binutils
 
 RUN apk add --no-cache perl make
 RUN cargo install cargo-deny
-
