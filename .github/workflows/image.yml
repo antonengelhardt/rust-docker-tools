@@ -35,5 +35,5 @@ jobs:
         push: true
         tags: ghcr.io/antonengelhardt/rust-docker-tools:latest
         registry: ghcr.io
-        username: ${{ secrets.GITHUB_ACTOR }}
+        username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
