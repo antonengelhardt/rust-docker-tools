@@ -6,7 +6,7 @@ on:
 
 jobs:
 
-  build:
+  docker-image:
 
     runs-on: ubuntu-latest
 
@@ -19,10 +19,21 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name: Build and push the Docker image
+    - name: Build and push the Docker image to docker.io
       uses: docker/build-push-action@v2
       with:
         context: .
         file: Dockerfile
         push: true
         tags: antonengelhardt/rust-docker-tools:latest
+
+    - name: Build and push the Docker image to ghcr.io
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        file: Dockerfile
+        push: true
+        tags: ghcr.io/antonengelhardt/rust-docker-tools:latest
+        registry: ghcr.io
+        username: ${{ secrets.GITHUB_ACTOR }}
+        password: ${{ secrets.GITHUB_TOKEN }}
